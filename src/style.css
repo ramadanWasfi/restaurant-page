@@ -15,3 +15,8 @@ header nav ul {
 header nav ul li a {
     text-decoration: none;
 }
+
+.contact-us {
+    display: flex;
+    gap: 16px
+}
