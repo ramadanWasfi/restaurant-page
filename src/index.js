@@ -1,5 +1,6 @@
 import './style.css';
 import { createHomePage } from './home';
+import { createMenuPage } from './menu';
 
 const CreateHeader = () => {
     const container = document.querySelector('#content');
@@ -66,7 +67,7 @@ const handleNavigation = (link) => {
             case 'Menu':
                 {
                     clearPage();
-                    //createMenuPage();
+                    createMenuPage();
                     break;
                 }
             case 'Contact Us':
