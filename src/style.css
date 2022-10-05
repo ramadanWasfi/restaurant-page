@@ -20,3 +20,8 @@ header nav ul li a {
     display: flex;
     gap: 16px
 }
+
+.link:hover{
+    color: red;
+    cursor: pointer;
+}

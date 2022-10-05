@@ -44,6 +44,43 @@ const CreateHeader = () => {
 }
 
 CreateHeader();
-createHomePage();
+
+const clearPage = () => {
+    const content = document.querySelector('#content');
+    let nodes = content.childNodes;
+    const CONTENT_AFTER_HEADER = 2;
+    for(let i = CONTENT_AFTER_HEADER; i < nodes.length; i++) {
+        content.removeChild(nodes[i]);
+    }
+}
+
+const navLinks = document.querySelectorAll('.link');
+const handleNavigation = (link) => {
+        switch(link.textContent) {
+            case 'Home':
+                {
+                    clearPage();
+                    createHomePage();
+                    break;
+                }
+            case 'Menu':
+                {
+                    clearPage();
+                    //createMenuPage();
+                    break;
+                }
+            case 'Contact Us':
+                {
+                    clearPage();
+                    //createContactUsPage();
+                    break;
+                }
+            default:
+                break;
+        }
+}
+navLinks.forEach(link => link.addEventListener('click', () => {
+    handleNavigation(link);
+}))
 
 
