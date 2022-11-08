@@ -1,6 +1,7 @@
 import './style.css';
 import { createHomePage } from './home';
 import { createMenuPage } from './menu';
+import { createContactUsPage } from './contactus';
 
 const CreateHeader = () => {
     const container = document.querySelector('#content');
@@ -45,6 +46,7 @@ const CreateHeader = () => {
 }
 
 CreateHeader();
+createHomePage();
 
 const clearPage = () => {
     const content = document.querySelector('#content');
@@ -73,7 +75,7 @@ const handleNavigation = (link) => {
             case 'Contact Us':
                 {
                     clearPage();
-                    //createContactUsPage();
+                    createContactUsPage();
                     break;
                 }
             default:
@@ -83,5 +85,3 @@ const handleNavigation = (link) => {
 navLinks.forEach(link => link.addEventListener('click', () => {
     handleNavigation(link);
 }))
-
-

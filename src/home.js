@@ -11,10 +11,10 @@ const createMainContent = () => {
     mainContent.setAttribute('id','mainContent');
 
     const mainDiv = createMainDiv();
-    const contactUsDiv = createContactUsDiv();
+  //  const contactUsDiv = createContactUsDiv();
 
     mainContent.appendChild(mainDiv);
-    mainContent.appendChild(contactUsDiv);
+//    mainContent.appendChild(contactUsDiv);
 
     return mainContent;
 }
@@ -31,14 +31,8 @@ const createMainDiv = () => {
     p2.textContent = 'Best pizzas in your country';
     p2.setAttribute('id','secondary-paragraph');
 
-    const orderBtn = document.createElement('button');
-    orderBtn.setAttribute('type','button');
-    orderBtn.textContent = 'Order Now';
-    orderBtn.setAttribute('id','orderBtn');
-
     container.appendChild(p);
     container.appendChild(p2);
-    container.appendChild(orderBtn);
 
     return container;
 }
