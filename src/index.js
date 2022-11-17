@@ -1,4 +1,3 @@
-import './style.css';
 import { createHomePage } from './home';
 import { createMenuPage } from './menu';
 import { createContactUsPage } from './contactus';
