@@ -1,3 +1,5 @@
+import background from './pizza.jpg';
+
 export const createHomePage = () => {
     const container = document.querySelector('#content');
 

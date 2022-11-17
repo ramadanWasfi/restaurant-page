@@ -7,9 +7,11 @@ const CreateHeader = () => {
     const container = document.querySelector('#content');
 
     const header = document.createElement('header');
-    
+
     const h1 = document.createElement('h1');
     h1.textContent = 'La Pizza';
+    h1.classList.add('link');
+
 
     const nav = document.createElement('nav');
 
@@ -61,6 +63,7 @@ const navLinks = document.querySelectorAll('.link');
 const handleNavigation = (link) => {
         switch(link.textContent) {
             case 'Home':
+            case 'La Pizza':
                 {
                     clearPage();
                     createHomePage();

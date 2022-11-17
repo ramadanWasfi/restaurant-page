@@ -66,11 +66,11 @@ const createContactUsInfo = () => {
     phoneHeader.textContent = "Phone";
 
     const phone = document.createElement('p');
-    hours.textContent = "(225)-789 4544";
-    hours.setAttribute('id','phone');
+    phone.textContent = "(225)-789 4544";
+    phone.setAttribute('id','phone');
 
-    phoneDiv.appendChild(hoursHeader);
-    phoneDiv.appendChild(hours);
+    phoneDiv.appendChild(phoneHeader);
+    phoneDiv.appendChild(phone);
 
     contactInfo.appendChild(addressDiv);
     contactInfo.appendChild(HoursDiv);

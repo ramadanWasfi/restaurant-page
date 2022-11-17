@@ -1,3 +1,7 @@
+import Margherita from './pizzatypes-margherita-.jpg';
+import GreekPizza from './onions.jpg';
+import Sicilian from './rectangle.jpg';
+
 export const createMenuPage = () => {
     const container = document.querySelector('#content');
 
@@ -12,9 +16,9 @@ const createMenu = () => {
     menuContainer.setAttribute('id','menuContainer');
 
     let menuHeader = createMenuHeader();
-    let item1 = createMenuItem('','Pizza1','50$','nice one');
-    let item2 = createMenuItem('','Margerita','50$','margeriatasd one');
-    let item3 = createMenuItem('','seasd pizza','50$','seasd one');
+    let item1 = createMenuItem(Margherita,'Pizza Margherita','50 $','Features tomatoes, sliced mozzarella, basil, and extra virgin olive oil.');
+    let item2 = createMenuItem(GreekPizza,'Greek Pizza','55 $','usually heavier on the sauce than the cheese. The sauce typically has a tangy tomato paste with a strong oregano flavor.');
+    let item3 = createMenuItem(Sicilian,'Sicilian Pizza','60 $','Sicilian pizzas are often topped with bits of tomato, onion, anchovies, and herbs.');
 
     menuContainer.appendChild(menuHeader);
     menuContainer.appendChild(item1);
@@ -39,7 +43,7 @@ const createMenuItem = (imgSrc, name, price, description) => {
 
     const imgContainer = document.createElement('div');
     imgContainer.classList.add('imgContainer');
-    const img = document.createElement('img');
+    const img = new Image();
     img.src = imgSrc;
     img.classList.add('itemImg');
     imgContainer.appendChild(img);
@@ -65,7 +69,8 @@ const createMenuItem = (imgSrc, name, price, description) => {
     itemDescription.classList.add('itemDescription');
     itemDescription.textContent = description;
 
-    item.appendChild(itemInfo);
+    item.appendChild(itemName);
+    item.appendChild(itemPrice);
     item.appendChild(itemDescription);
 
 
